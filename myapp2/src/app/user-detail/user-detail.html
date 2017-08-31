@@ -1,0 +1,9 @@
+
+<div class="favorito-box" *ngIf="user">
+<h1>{{user.title}}</h1>
+    <strong>Player:   </strong>  <span class="userName">{{user.userName}}</span><br/>
+    <strong>Wins: </strong><span class="wins">{{user.wins}}</span><br/>
+    <strong>Total Games: </strong><span class="totalWins">{{user.totalGames}}</span>
+</div>
+    <a class="btn-volver font-Julius" [routerLink]="['/']">Volver</a>
+

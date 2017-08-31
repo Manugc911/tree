@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header id="header">
+    <a class="btn-add-favorito font-Julius" [routerLink]="['/create-player']">New User</a>
+    <a class="btn-tree font-Julius" [routerLink]="['/tree2']">Tree</a>
+    <div class="title-subtitle">
+
+        <img src="../assets/images/angular-icon-1.svg" id="logo">
+
+        <h1><a [routerLink]="['/']" class="font-Julius">{{title | uppercase}}</a></h1>
+
+        <p class="font-amatic">{{description}}</p>
+    </div>
+    
+
+    <div class="clearfix"></div>
+</header>
+<section class="main">
+    <router-outlet></router-outlet>
+    <div class="clearfix"></div>
+</section>

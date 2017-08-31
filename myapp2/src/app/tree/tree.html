@@ -1,0 +1,10 @@
+<br/>
+Numero de Jugadores:<input type="number" [(ngModel)]="childNumber" >
+Rondas: {{this.rows}}
+<input type="button" (click)="refreshTree()" value="Crear"/>
+<div id="tree"  style="position:absolute">
+
+</div>
+
+<dropdown *ngIf="dropVisible"></dropdown>
+

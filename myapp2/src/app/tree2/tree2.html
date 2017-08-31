@@ -1,0 +1,43 @@
+<br/> Numero de Usuarios:<input type="number" [(ngModel)]="childNumber"> Rondas: {{this.nrows}}
+<input type="button" (click)="create()" value="Crear" />
+<div id="tree" style="position:absolute">
+
+</div>
+
+<div id="row{{i}}" *ngFor="let row of rows;let i = index">
+
+    <div id="row{{i}}cell{{n}}" *ngFor="let cell of cells[i];let n=index">
+        <div class="square">
+    
+            <dropdown id="dropCell{{n}}"></dropdown>
+        </div>
+    </div>
+</div>
+<!--
+<div id="start">
+    
+    <div id="tree" style="position: absolute; ">
+        <div style="background-color:transparent;height:50px;width:100%;float:left;" id="start0">
+            <div>
+                <div id="row0cell0" class="square cell0row0"></div>
+                <div id="arrows" class="row" style="width:100%;margin-left: 44%;"><span><img src="../../assets/images/arrow2.png" width="40px"><img src="../../assets/images/arrow1.png" width="40px"></span></div>
+            </div>
+        </div>
+        
+        <div id="start1" style="background-color:transparent; height:50px;width:50%;float:left;margin-top:60px;">
+            <div>
+                <div id="row1cell0" class="square cell0row1"></div>
+            </div>
+        </div>
+        <div id="start2" style="background-color:transparent; height:50px;width:50%;float:left;margin-top:60px;">
+            <div>
+                <div id="row1cell1" class="square cell1row1">
+                    <div>{{this.childNumber}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+-->

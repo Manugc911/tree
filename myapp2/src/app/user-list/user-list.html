@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="../../assets/css/styles.css" />
+<div>
+
+<div class="loading" *ngIf="loading">
+    <img src="../../assets/images/loader.gif">
+    </div>
+    <ul id="favoritos-list" >
+        <li class="favorito-item" *ngFor="let user of users">
+            <div class="content-data">
+                <h4 class="font-Julius">{{user.userName}}</h4>
+
+                <p class="font-Julius">{{user.wins}}</p>
+                <p class="buttons">
+                   
+            <a [routerLink]="['/user/',user._id]" title="Ver {{user.userName}}"  class="btn btn-Ver font-Julius">
+                Ver
+            </a>
+                    
+            <a  [routerLink]="['/edit-player/',user._id]"  title="Editar {{user.userName}}" class="btn btn-Editar font-Julius">
+                Editar
+            </a>
+                
+            <a  title="Eliminar {{user.userName}} "  class="btn btn-Borrar font-Julius" (click)="showConfirmar(user._id)">
+                Borrar
+            </a>
+            <div id="confirmarBorrar" *ngIf="confirmado == user._id">
+                <p>
+                    ¿Seguro que quieres eliminar el marcador?
+                    <a  title="Eliminar {{user.userName}} "  class="btn btn-Borrar font-Julius" (click)="deleteUser(user._id)">
+                        Si
+                    </a>
+                    <a  title="No eliminar {{user.userName}} "  class="btn btn-Editar font-Julius" (click)="hideConfirmar()">
+                        No
+                    </a>
+                </p>
+                    
+            </div>
+                
+            </div>
+        </li>
+    </ul>
+  
+</div>
+

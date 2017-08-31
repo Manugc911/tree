@@ -1,0 +1,21 @@
+<div class="favorito-box">
+    <h2>{{titleSection}}</h2>
+    <form #formFavoritos="ngForm" (ngSubmit)="onSubmit();">
+        <label for="title"> Titulo: </label>
+        <p>
+            <input id="userName" name="userNamein" type="text" #title="ngModel" [(ngModel)]="user.userName" required/>
+            <!--<span *ngIf="userName.touched && !userName.valid">El nombre de usuario es obligatorio.</span>-->
+        </p>
+        <label for="wins"> Wins: </label>
+        <p>
+            <input id="wins" type="number" name="description" type="text"  disabled value="{{user.wins}}" />
+          
+        </p>
+        <label for="totalGames"> Total Games: </label>
+        <p>
+            <input id="totalGames" name="number" type="number"   disabled  value="{{user.totalGames}}"/>
+           
+        </p>
+        <input type="submit"/>
+    </form>
+</div>

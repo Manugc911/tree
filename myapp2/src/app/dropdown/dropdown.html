@@ -1,0 +1,16 @@
+<div>User:
+<select name="user"  >
+    <option value="">-</option>
+    <option *ngFor="let User of Users" value="{{User.userName}}">{{User.userName}}</option>
+</select>
+    </div>
+<div>
+    
+Score:
+<select name="score">
+    <option value="">-</option>
+    <option *ngFor="let Score of Scores" value="{{Score}}">{{Score}}</option>
+    
+
+</select>
+</div>
